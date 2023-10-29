@@ -1,0 +1,32 @@
+
+
+
+
+
+class Employe:
+    def __init__(self,full_name,work_time,depart,bonus):
+        self.full_name = full_name
+        self.work_time = work_time
+        self.depart  = depart
+        self.bonus  = bonus
+
+    def get_full_name(self):
+        return  self.full_name
+    def get_work_time(self):
+        return self.work_time
+    def get_depart(self):
+        return self.depart
+    def get_bunus(self):
+        return self.bonus
+    def get_salary(self):
+        salary = (self.work_time *self.depart.get_money())+((self.work_time *self.depart.get_money())/100)*self.bonus
+        return salary
+
+
+    def __repr__(self):
+        return self.full_name
+    def tanishtir(self):
+        return f"My name is {self.full_name}" \
+               f"My department is {self.depart}" \
+               f"I work {self.work_time} hours in a week" \
+               f"My salary is {self.get_salary()}"
